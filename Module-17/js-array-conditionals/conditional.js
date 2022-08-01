@@ -12,3 +12,5 @@ if (chickenPrice < myMoney) {
 } else {
     console.log('eat potato');
 }
+
+
