@@ -23,12 +23,13 @@
 //     console.log(tableItem);
 // }
 
-var numbers = [45, 87, 89, 56, 32, 51, 25, 39, 99, 105];
+// var numbers = [45, 87, 89, 56, 32, 51, 25, 39, 99, 105];
 
-for (var i = 0; i < numbers.length; i++) {
-    var number = numbers[i];
-    if (number > 50) {
-        continue;
-    }
-    console.log(number);
-}
+// for (var i = 0; i < numbers.length; i++) {
+//     var number = numbers[i];
+//     if (number > 50) {
+//         continue;
+//     }
+//     console.log(number);
+// }
+
