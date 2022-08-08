@@ -8,4 +8,11 @@ function factorial(number) {
     return result;
 }
 var totalNumber = factorial(6);
-console.log(totalNumber);
+// console.log(totalNumber);
+
+function print(a, b, c) {
+    return a + 2;
+    return a * b;
+    return b * c + a;
+}
+console.log(print(1, 2, 3));
