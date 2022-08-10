@@ -1,7 +1,8 @@
 /*
-    Problem-7:
+    Problem-8:
 
-     Write a function named findArea() that will take base and height of a triangle and will return the area of triangle.
+    Write a function named findArea() that will take base and height of a triangle
+and will return the area of triangle.
 
 */
 
