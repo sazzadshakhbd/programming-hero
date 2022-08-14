@@ -5,38 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Dom Events</title>
+    <title>JS Dom Summary</title>
 </head>
 
 <body>
 
-    <!-- কিভাবে onclick এ console.log show করে? -->
-    <h1 onclick="console.log('I am Clicked')">Dom ar ajke Special Events</h1>
-    <button title="THisis a tooltip" onclick="console.log(7)">Click Me </button>
-    <button onclick="console.log(65)">Another Button</button>
+    <h1>Final Dom Event Handelers</h1>
+    <!-- How to text change on click -->
+    <h3 id="changeParagraphText">Default Text</h3>
+    <button onclick="changeText()">Text Change</button>
+    <button id="eventListener">Event Listener</button>
+    <br>
+    <br>
+    <br>
 
-    <!-- How to decleare a onclick event inline way -->
-    <button onclick="document.body.style.backgroundColor = 'yellow'">Make Yellow</button>
+    <!-- How to text change in input-field -->
+    <p id="changeInputText">Default Text</p>
+    <input id="inputField" type="text"><br><br>
+    <button id="updateButton">update</button>
 
-    <!-- How to decleare a onclick event functionally  -->
-    <button onclick="makeRed()">Make Red</button>
 
-    <!-- How to decleare a onclick event using id -->
-    <button id="makeBlue">Make Blue</button>
+    <script>
+        //  How to text change on click using id
+        function changeText() {
+            const changeButtonText = document.getElementById('changeParagraphText');
+            changeButtonText.innerText = 'Change Text. Wow!';
+        }
 
-    <!-- How to decleare a onclick event using id [Option-2] -->
-    <button id="makePurple">Make Purple</button>
+        //  How to text change on click using addEventlistener
+        document.getElementById('eventListener').addEventListener('click', function () {
+            const changeTxt = document.getElementById('changeParagraphText');
+            changeTxt.innerText = 'update text';
+        })
 
-    <!-- How to decleare a onclick event using addEventListener [Option-1] -->
-    <button id="makePink">Make Pink</button>
+        // How to text change in input-field
+        document.getElementById('updateButton').addEventListener('click', function () {
+            const inputFieldSection = document.getElementById('inputField');
+            const inputText = inputFieldSection.value;
 
-    <!-- How to decleare a onclick event using addEventListener [Option-2] -->
-    <button id="makeGreen">Make Green</button>
+            const p = document.getElementById('changeInputText')
+            p.innerText = inputText;
+            inputFieldSection.value = ' ';
+        })
 
-    <!-- How to decleare a onclick event using addEventListener [Final] -->
-    <button id="makeTeal">Make Teal</button>
-
-    <script src="js/01-Event.js"></script>
+    </script>
 </body>
 
 </html>
