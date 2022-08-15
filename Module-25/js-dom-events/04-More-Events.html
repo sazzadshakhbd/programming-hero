@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+
+<body>
+    <h1>Explore More Events</h1>
+
+    <button id="clickMe">Click Me</button>
+    <button id="mouseMove">Mouse Move</button>
+    <button id="mouseEnter">Mouse Enter</button>
+    <input type="text" id="textInputFocus" placeholder="focus">
+    <input type="text" id="textInputBlur" placeholder="blur">
+    <input type="text" id="keyUp" placeholder="Key Up">
+    <input type="text" id="keyDown" placeholder="Key Down">
+    <input type="text" id="keyPress" placeholder="Key Press">
+
+    <script>
+        // How to work click function using addEventListener
+        document.getElementById('clickMe').addEventListener('click', function () {
+            console.log('Worked Click Function');
+        });
+
+        // How to work MouseMove function using addEventListener
+        document.getElementById('mouseMove').addEventListener('mousemove', function () {
+            console.log('Worked MouseMove Function');
+        });
+
+        // How to work MouseEnter function using addEventListener
+        document.getElementById('mouseEnter').addEventListener('mouseenter', function () {
+            console.log('Worked MouseEnter Function');
+        });
+
+        // How to work Focus using addEventListener
+        document.getElementById('textInputFocus').addEventListener('focus', function () {
+            console.log('Worked Input Focus');
+        });
+
+        // How to work Blur using addEventListener
+        document.getElementById('textInputBlur').addEventListener('blur', function () {
+            console.log('Worked Input Blur');
+        });
+
+        // How to work Key Up using addEventListener
+        document.getElementById('keyUp').addEventListener('keyup', function (event) {
+            console.log(event.target.value);
+        });
+
+        // How to work Key Down using addEventListener
+        document.getElementById('keyDown').addEventListener('keydown', function (event) {
+            console.log(event.target.value);
+        });
+
+        // How to work Key Press Down using addEventListener
+        document.getElementById('keyPress').addEventListener('keypress', function (event) {
+            console.log(event.target.value);
+        });
+    </script>
+</body>
+
+</html>

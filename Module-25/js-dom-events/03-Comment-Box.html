@@ -29,15 +29,22 @@
 
     <script>
         document.getElementById('btn-post').addEventListener('click', function () {
+            // Step-2: Get the comment inside the text area
             const textAreaField = document.getElementById('new-comment');
             const textAreaFieldContent = textAreaField.value;
 
+            // Step-3: Set the comment inside the comment area
+
+
+            // a) get the comment contaier
             const textContainer = document.getElementById('text-container');
+            // b) Create a new element p tag
             const para = document.createElement('p');
+            // c) Set the text of the comment as innertext of the p tag
             para.innerText = textAreaFieldContent;
-
+            // d) add the p tag using appendchild
             const includePara = textContainer.appendChild(para);
-
+            // Step-4: Clear the textarea
             textAreaField.value = '';
 
         })
