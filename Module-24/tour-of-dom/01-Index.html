@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of Dom</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+    </header>
+    <main>
+        <h1>Listing Name</h1>
+        <ul>
+            <li>sazzad</li>
+            <li>sobuz</li>
+            <li>marjia</li>
+            <li>Adib</li>
+            <li>Adiba</li>
+            <li>Maa</li>
+            <li>Baba</li>
+        </ul>
+        <h1>Listing Fruits Name</h1>
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Mango</li>
+            <li>Banana</li>
+            <li>Lichi</li>
+            <li>Papay</li>
+        </ul>
+    </main>
+    <script>
+        const liItems = document.getElementsByTagName('li')
+        // console.log(liItem);
+
+        for (liItem of liItems) {
+            //console.log(liItem);
+            console.log(liItem.innerText)
+        }
+
+        const allHeadingShows = document.getElementsByTagName('h1');
+        // console.log(allHeadingShows);
+
+        for (allHeadingShow of allHeadingShows) {
+            // console.log(allHeadingShow);
+            console.log(allHeadingShow.innerText);
+        }
+
+    </script>
+</body>
+
+</html>
