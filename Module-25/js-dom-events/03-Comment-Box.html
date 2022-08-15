@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Comment</title>
+</head>
+
+<body>
+    <h1>Please add your comment</h1>
+    <div id="text-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui corrupti, incidunt illo inventore accusamus
+            harum, blanditiis nihil accusantium, cumque nemo provident. Tempora consequatur saepe maiores. Explicabo,
+            esse rem? Deserunt, veritatis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui corrupti, incidunt illo inventore accusamus
+            harum, blanditiis nihil accusantium, cumque nemo provident. Tempora consequatur saepe maiores. Explicabo,
+            esse rem? Deserunt, veritatis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui corrupti, incidunt illo inventore accusamus
+            harum, blanditiis nihil accusantium, cumque nemo provident. Tempora consequatur saepe maiores. Explicabo,
+            esse rem? Deserunt, veritatis?</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+        <br><br>
+        <button id="btn-post">Post</button>
+    </div>
+
+    <script>
+        document.getElementById('btn-post').addEventListener('click', function () {
+            const textAreaField = document.getElementById('new-comment');
+            const textAreaFieldContent = textAreaField.value;
+
+            const textContainer = document.getElementById('text-container');
+            const para = document.createElement('p');
+            para.innerText = textAreaFieldContent;
+
+            const includePara = textContainer.appendChild(para);
+
+            textAreaField.value = '';
+
+        })
+    </script>
+</body>
+
+</html>
