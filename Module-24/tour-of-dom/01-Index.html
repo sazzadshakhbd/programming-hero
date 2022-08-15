@@ -30,7 +30,7 @@
         </section>
         <section>
             <h1 id="fruitsTitle">Listing Fruits Name</h1>
-            <ul>
+            <ul class="fruits-container">
                 <li>Apple</li>
                 <li>Orange</li>
                 <li>Mango</li>
@@ -75,7 +75,12 @@
 
         const changeText = document.getElementById('fruitsTitle');
         changeText.innerText = 'Favourite Fruits Name';
-        console.log(changeText);
+        // console.log(changeText);
+
+        const fruitsContainer = document.querySelectorAll('.fruits-container li');
+        for (const li of fruitsContainer) {
+            console.log(li.innerText);
+        }
     </script>
 </body>
 
