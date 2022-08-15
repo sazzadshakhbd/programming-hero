@@ -11,27 +11,43 @@
 <body>
     <header>
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa enim aliquam sit illo. Delectus totam fuga
+            consequatur reprehenderit minima culpa velit quos corrupti iste sint, porro molestias omnis eaque excepturi?
+        </p>
     </header>
     <main>
-        <h1>Listing Name</h1>
-        <ul>
-            <li>sazzad</li>
-            <li>sobuz</li>
-            <li>marjia</li>
-            <li>Adib</li>
-            <li>Adiba</li>
-            <li>Maa</li>
-            <li>Baba</li>
-        </ul>
-        <h1>Listing Fruits Name</h1>
-        <ul>
-            <li>Apple</li>
-            <li>Orange</li>
-            <li>Mango</li>
-            <li>Banana</li>
-            <li>Lichi</li>
-            <li>Papay</li>
-        </ul>
+        <section>
+            <h1>Listing Name</h1>
+            <ul>
+                <li>sazzad</li>
+                <li>sobuz</li>
+                <li>marjia</li>
+                <li>Adib</li>
+                <li>Adiba</li>
+                <li>Maa</li>
+                <li>Baba</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruitsTitle">Listing Fruits Name</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Mango</li>
+                <li>Banana</li>
+                <li>Lichi</li>
+                <li>Papay</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Visit Places</h1>
+            <ul>
+                <li class="important-places">Sundorban</li>
+                <li class="important-places">Katabon</li>
+                <li class="important-places">Bandorban</li>
+                <li class="important-places">Shalbon</li>
+            </ul>
+        </section>
     </main>
     <script>
         const liItems = document.getElementsByTagName('li')
@@ -39,7 +55,7 @@
 
         for (liItem of liItems) {
             //console.log(liItem);
-            console.log(liItem.innerText)
+            // console.log(liItem.innerText)
         }
 
         const allHeadingShows = document.getElementsByTagName('h1');
@@ -47,9 +63,19 @@
 
         for (allHeadingShow of allHeadingShows) {
             // console.log(allHeadingShow);
-            console.log(allHeadingShow.innerText);
+            // console.log(allHeadingShow.innerText);
         }
 
+        const importantPlaces = document.getElementsByClassName('important-places');
+        // console.log(importantPlaces);
+        for (importantPlace of importantPlaces) {
+            // console.log(importantPlace);
+            // console.log(importantPlace.innerText)
+        }
+
+        const changeText = document.getElementById('fruitsTitle');
+        changeText.innerText = 'Favourite Fruits Name';
+        console.log(changeText);
     </script>
 </body>
 
