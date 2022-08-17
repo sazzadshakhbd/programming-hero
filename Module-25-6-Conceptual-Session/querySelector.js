@@ -9,5 +9,5 @@ const element = document.querySelectorAll('h2');
 
 for (singleelement of element) {
     // console.log(singleelement);
-    console.log(singleelement.innerText);
+    // console.log(singleelement.innerText);
 }
