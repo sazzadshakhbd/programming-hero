@@ -1,10 +1,13 @@
 // Event Listener
 document.getElementById('btn-yes').addEventListener('click', function () {
-    const messageText = document.getElementById('message');
-    messageText.innerText = 'Yes, I love you 💟 ';
+    optimizeWay('message');
 })
 
 // Event Handaler
 function offCourse() {
-    document.getElementById('message').innerText = 'Yes, I love you 💘 ';
+    optimizeWay('message');
+}
+
+function optimizeWay(id) {
+    document.getElementById(id).innerText = 'Yes, I love you 💘';
 }
