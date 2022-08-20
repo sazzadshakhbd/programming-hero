@@ -29,6 +29,11 @@ document.getElementById('input-btn').addEventListener('click', function () {
             event.target.parentNode.parentNode.style.textDecoration = 'line-through'
         })
     }
+    const cleareBtn = document.getElementById('clear-btn');
+    cleareBtn.addEventListener('click', function () {
+        tableContainer.style.display = 'none';
+    })
 
 })
+
 
