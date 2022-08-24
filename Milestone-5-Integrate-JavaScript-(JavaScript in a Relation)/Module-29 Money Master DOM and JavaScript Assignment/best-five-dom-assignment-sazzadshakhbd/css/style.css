@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+body {
+    background: #151515;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+header {
+    background-color: #000;
+}
+
+.banner {
+    height: 481px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1 {
+    font-family: 'Berkshire Swash', cursive;
+    color: #FF5E19;
+    font-size: 76px;
+    line-height: 94px;
+}
+
+.title p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+}
+
+.all-players-info .card {
+    border: 1px solid #434343;
+    background-color: #0D0D0D;
+    margin-bottom: 20px;
+}
+
+.all-players-info .card .card-title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.all-players-info .card ul li {
+    font-size: 16px;
+    line-height: 22px;
+    color: #B3B3B3;
+}
+
+.all-players-info .card ul li span {
+    vertical-align: super;
+}
+
+.btn-theme {
+    background-color: #015196;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    line-height: 42px;
+}
+
+
+.selected-players-list {
+    border: 1px solid #434343;
+    background-color: #0D0D0D;
+    margin-bottom: 20px;
+}
+
+.selected-players-list h2 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.selected-players-list ol li {
+    color: #888888;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 10px;
+}
+
+.selected-players-list ol li span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.player-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.player-field span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #AFAFAF;
+}
+
+.player-field input {
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #fff;
+    padding: 0;
+    width: 121px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 10px;
+    height: 42px;
+    color: #fff;
+}
+
+.player-field h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}

@@ -19,7 +19,7 @@
             const deleteFunction = document.getElementById('delete-btn');
 
             if (text === 'delete') {
-                deleteFunction.removeAttribute('disabled')
+                deleteFunction.removeAttribute('disabled', false)
             } else {
                 deleteFunction.setAttribute('disabled', true);
             }
