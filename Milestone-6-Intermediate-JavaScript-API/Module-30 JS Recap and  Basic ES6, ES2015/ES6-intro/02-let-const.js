@@ -18,6 +18,12 @@ student.age = 39;
 let sum = 0;
 for (let i = 0; i < numbers.length; i++) {
     const num = numbers[i];
-    sum = sum + numbers;
-    console.log(num);
+    sum = sum + num;
+    console.log(sum, num);
+}
+
+const fruits = ['apple', 'orange', 'lichi'];
+for (let i = 0; i < fruits.length; i++) {
+    const showFruitsName = fruits[i];
+    // console.log(showFruitsName);
 }
