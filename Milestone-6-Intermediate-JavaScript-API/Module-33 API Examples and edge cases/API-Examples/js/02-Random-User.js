@@ -22,8 +22,7 @@ displayData = usersInfo => {
                 <li>ID-Name: ${users.id.name}</li>
                 <li>ID-Value: ${users.id.value}</li>
                 <li>City: ${users.location.city}</li>
-                <li>Latitude: ${users.location.coordinates.latitude}</li>
-                <li>Longitude: ${users.location.coordinates.longitude}</li>
+                <li>Longitude: ${users.location.coordinates.longitude}, ${users.location.coordinates.latitude}</li>
                 
             </ul>
         `
