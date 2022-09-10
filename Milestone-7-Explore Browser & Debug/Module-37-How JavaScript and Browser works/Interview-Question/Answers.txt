@@ -1,0 +1,30 @@
+1. how does browser runs javascript?
+https://medium.com/jspoint/how-javascript-works-in-browser-and-node-ab7d0d09ac2f
+
+2.how does browser works?
+https://www.freecodecamp.org/news/web-application-security-understanding-the-browser-5305ed2f1dac/
+
+3.Difference between HTTP Vs HTTPS?
+https://www.freecodecamp.org/news/http-vs-https/
+
+4. Tell me about something js engine v8 internal mechanism?
+https://www.freecodecamp.org/news/javascript-under-the-hood-v8/
+https://www.freecodecamp.org/news/understanding-the-core-of-nodejs-the-powerful-chrome-v8-engine-79e7eb8af964/
+
+5.what is render in browser
+https://blog.logrocket.com/how-browser-rendering-works-behind-scenes/
+
+6.what is event loop in javascript?
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+
+7.If javascript is single threaded how does it handle asynchronous call?
+https://dev.to/bbarbour/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd#:~:text=Javascript%20is%20a%20single%20threaded,before%20moving%20onto%20the%20next.
+
+8.What is ssl?
+https://www.cloudflare.com/learning/ssl/what-is-ssl/
+
+9.Difference between settimeout and setinterval?
+https://www.educba.com/settimeout-vs-setinterval/
+
+10. what is regular expression in javascript?
+https://www.w3schools.com/js/js_regexp.asp

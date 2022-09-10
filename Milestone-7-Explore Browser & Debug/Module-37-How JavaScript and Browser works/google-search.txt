@@ -1,0 +1,24 @@
+what is google ip address?
+
+how does internet work?
+See Youtube Video-https://www.youtube.com/watch?v=x3c1ih2NJEg
+
+What is http?
+Define Protocol?
+What is http layer?
+what is ssl certificate?
+http version 4?
+How javascript run on browser?
+
+Javascript V8 Engine
+https://v8.dev/
+
+Just-In-Time (JIT) compiler?
+javascript script tag attribute?
+javascript lifo queue
+
+javascript event loop
+https://www.youtube.com/watch?v=8aGhZQkoFbQ
+
+
+
