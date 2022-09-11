@@ -1,0 +1,9 @@
+What is a browser?
+What is Bom in browser in javascript?
+waht is Javascript browser/web api?
+Dom vs Bom ?
+browser location
+browser cookies
+
+what is cookies in browser
+https://www.kaspersky.com/resource-center/definitions/cookies
