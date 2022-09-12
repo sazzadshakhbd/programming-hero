@@ -1,3 +1,6 @@
+// Always use ===
+// Equal Comparisin does not work for non-primitive
+
 const first = 2;
 const second = 2;
 
