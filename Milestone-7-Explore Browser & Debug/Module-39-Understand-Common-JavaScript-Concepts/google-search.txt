@@ -1,0 +1,3 @@
+javascript type coercion example
+javascript compare two objects
+javascript compare two arrays
