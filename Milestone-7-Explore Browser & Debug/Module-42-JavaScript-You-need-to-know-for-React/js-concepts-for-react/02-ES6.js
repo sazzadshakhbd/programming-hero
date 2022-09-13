@@ -22,9 +22,7 @@ const doMath = (num1, num2) => {
 
 // 3. Spread Operator
 
-
 const newNumbers = [...numbers, 70, 80, 90, 100]; // Create a New Array from an older Array and Add an Element
-
 console.log(newNumbers);
 
 numbers.push(99);
