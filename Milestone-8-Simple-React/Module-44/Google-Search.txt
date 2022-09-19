@@ -1,0 +1,8 @@
+single page application
+url parts
+
+https://media.geeksforgeeks.org/wp-content/uploads/20210625160610/urldiag.PNG
+
+attribute vs properties
+thatjsdude
+

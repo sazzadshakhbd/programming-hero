@@ -1,0 +1,12 @@
+প্রাকটিস চ্যালেঞ্জ-1: 
+--------------
+
+নিচের ভেরিয়েবল ডিক্লেয়ার এ কোনটার মধ্যে কি কি সমস্যা আছে। দেখতো বের করতে পারো কিনা?
+
+Var price = 33
+var name - Shabana
+var boxName = ‘Cocola;
+var 88_price = 34;
+var enum = -1;
+var _$box’78 = ‘Monika’; 
+var home-address = “kochu khet”;

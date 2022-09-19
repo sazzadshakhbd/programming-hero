@@ -1,0 +1,6 @@
+1. What is Javascript? 
+2. What is a Scripting Language?
+3. History of javascript?
+4. Online Code Editor: codepen
+5. Just-in-time compiler
+6. v8 engine
