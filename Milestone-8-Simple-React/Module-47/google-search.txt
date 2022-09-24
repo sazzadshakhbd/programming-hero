@@ -1,0 +1,14 @@
+1. What is npm?
+2. What is npx?
+3. create-react-app?
+4. What is cli?
+5. ctrl+shift+p > Markdown: open preview
+6. Difference between package.json & package.lock.json
+7. JSX in depth
+8. What are the advantage of jsx?
+9. What is component of react?
+10. How react works?
+11. React Diff Algorithm
+12. react fiber architecture
+13. what is react virtual dom
+14. react component lifecycle
