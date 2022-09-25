@@ -1,2 +1,0 @@
-netlify cli deploy
-how to connect netlify to github
