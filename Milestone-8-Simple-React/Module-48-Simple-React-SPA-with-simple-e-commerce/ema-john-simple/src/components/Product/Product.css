@@ -1,0 +1,16 @@
+.card {
+    width: 300px;
+    height: 508px;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+}
+
+.card .card-body {
+    padding: 7px;
+}
+
+.card img {
+    width: 286px;
+    height: 286px;
+    border-radius: 8px;
+}
