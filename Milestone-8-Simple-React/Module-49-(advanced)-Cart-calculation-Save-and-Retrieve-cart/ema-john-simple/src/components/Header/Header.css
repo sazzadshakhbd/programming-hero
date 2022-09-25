@@ -1,0 +1,44 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1C2B35;
+    height: 80px;
+    padding: 0 140px;
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    margin-left: 32px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    transition: 0.3s ease;
+}
+
+
+nav a:hover {
+    color: tomato;
+}
+
+
+
+@media(max-width: 767.98px) {
+    nav {
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 575.98px) {
+    nav {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    nav a {
+        margin-left: 15px;
+    }
+}
