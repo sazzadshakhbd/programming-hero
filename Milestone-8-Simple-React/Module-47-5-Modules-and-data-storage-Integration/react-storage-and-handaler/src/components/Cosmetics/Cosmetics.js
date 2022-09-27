@@ -3,11 +3,31 @@ import Ornaments from '../Ornaments/Ornaments';
 
 const Cosmetics = () => {
     const cosmetics = [
-        { id: 1, name: 'kaner dul', price: 300 },
-        { id: 2, name: 'nak ful', price: 100 },
-        { id: 3, name: 'golar chain', price: 3000 },
-        { id: 4, name: 'hater churi', price: 5000 },
-        { id: 5, name: 'chuler fita', price: 30 },
+        {
+            "id": "633272ede503c62e9b7eb166",
+            "price": 108,
+            "name": "Maura Rios"
+        },
+        {
+            "id": "633272ed092e2fd56e4a3fe7",
+            "price": 94,
+            "name": "Celina Mcgee"
+        },
+        {
+            "id": "633272ed5e6ad4eb46f30498",
+            "price": 328,
+            "name": "Luz Randall"
+        },
+        {
+            "id": "633272ed8c225c9b5177e135",
+            "price": 317,
+            "name": "Carson Patton"
+        },
+        {
+            "id": "633272ed453b433db7e274fa",
+            "price": 321,
+            "name": "Kelsey Winters"
+        }
     ]
     return (
         <div>

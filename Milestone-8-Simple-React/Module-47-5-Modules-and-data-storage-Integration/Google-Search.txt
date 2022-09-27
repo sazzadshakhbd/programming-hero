@@ -1,1 +1,2 @@
 1. javascript array reduce
+2. json generator
