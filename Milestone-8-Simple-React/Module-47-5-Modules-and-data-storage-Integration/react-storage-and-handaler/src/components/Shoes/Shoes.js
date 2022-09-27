@@ -10,8 +10,8 @@ const Shoes = () => {
 
     return (
         <div>
-            <h1>This is shoes component</h1>
-            <h2>Total: multiply-{total} and add-{result}</h2>
+            {/* <h1>This is shoes component</h1>
+            <h2>Total: multiply-{total} and add-{result}</h2> */}
         </div>
     );
 };
