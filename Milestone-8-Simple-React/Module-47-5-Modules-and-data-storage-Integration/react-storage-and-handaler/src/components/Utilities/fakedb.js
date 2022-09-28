@@ -2,15 +2,13 @@
 const addToDb = (id) => {
 
     // let shoppingCart = {};
-    let shoppingCart;
+    let shoppingCart = {};
 
-    // Get the shopping cart
+    // Get the shopping cart from localstorage
     const storedCart = localStorage.getItem('shopping-cart')
     if (storedCart) {
         // console.log(typeof storedCart)
         shoppingCart = JSON.parse(storedCart)
-    } else {
-        shoppingCart = {}
     }
 
     // Add Quantity
@@ -23,5 +21,19 @@ const addToDb = (id) => {
     }
     localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
 }
+const removeFromDb = (id) => {
+    // console.log('fak db', id)
+    const storedCart = localStorage.getItem('shopping-cart');
+    const shoppingCart = JSON.parse(storedCart)
+    if (id in shoppingCart) {
+        // console.log('exists in te cart');
+        delete shoppingCart[id];
+        localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart));
+    }
+}
 
-export { addToDb }
+const deleteShoppingCart = () => {
+    localStorage.removeItem('shopping-cart')
+}
+
+export { addToDb, removeFromDb, deleteShoppingCart }
