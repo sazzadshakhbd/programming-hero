@@ -9,6 +9,7 @@ function App() {
       <Buttons></Buttons>
       <Spinners></Spinners>
       <GridCard></GridCard>
+      <h1 className="my-5 text-5xl">Md. Sazzad Ali Shakh</h1>
     </div>
   );
 }
