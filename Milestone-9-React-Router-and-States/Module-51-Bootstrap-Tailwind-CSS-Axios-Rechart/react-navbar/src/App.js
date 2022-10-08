@@ -1,4 +1,5 @@
 import './App.css';
+import AssignmentMarks from './components/AssignmentMarks/AssignmentMarks';
 import Navbar from './components/Navbar/Navbar';
 import Pricing from './components/Pricing/Pricing';
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Navbar></Navbar>
       <Pricing></Pricing>
+      <AssignmentMarks></AssignmentMarks>
     </div>
   );
 }
