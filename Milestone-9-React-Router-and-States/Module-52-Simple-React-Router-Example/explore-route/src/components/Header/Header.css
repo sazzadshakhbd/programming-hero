@@ -7,3 +7,7 @@
 .header a:hover {
     background-color: rgb(18, 140, 181);
 }
+
+.active {
+    background-color: teal;
+}
