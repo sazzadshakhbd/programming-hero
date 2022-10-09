@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const FriendDetails = () => {
     const friend = useLoaderData();
-    console.log(friend);
+    // console.log(friend);
     return (
         <div>
             <h2>This is friend details page</h2>
