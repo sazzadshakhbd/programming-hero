@@ -3,17 +3,13 @@ import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import { addToDb, getStoreCard } from '../../utilities/fakedb';
 import './Shop.css';
+import { useLoaderData } from 'react-router-dom';
 
 const Shop = () => {
-    const [products, setProducts] = useState([]);
+    const products = useLoaderData();
     const [cart, setCart] = useState([]);
 
-    useEffect(() => {
-        // console.log('product loads before')
-        fetch('products.json')
-            .then(res => res.json()
-                .then(data => setProducts(data)))
-    }, []);
+
 
     useEffect(() => {
         // console.log('local storage first line')
