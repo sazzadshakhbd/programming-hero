@@ -9,4 +9,11 @@
     6. Set the main layout at the root of the route
     7. Set children routes
     8. Set links on the header components
+
+
+    Context API
+    ---------------
+    1. Declare a Context
+    2. Set Provider with value
+    3. use context in the place where you want to get the context
 */
