@@ -1,2 +1,5 @@
 1. Express Js
 2. npm
+3. nodemon
+4. react router dom
+5. cors express js
