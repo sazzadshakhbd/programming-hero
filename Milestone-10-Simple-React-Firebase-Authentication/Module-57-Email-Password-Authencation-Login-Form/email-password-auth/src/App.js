@@ -1,7 +1,9 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { getAuth } from 'firebase/auth';
 import app from './firebase/firebase.init';
+import RegisterReact from './components/RegisterReact';
 
 const auth = getAuth(app);
 
@@ -19,14 +21,15 @@ const onChangePasswordHandler = (event) => {
 }
 function App() {
   return (
-    <div className="App">
-      <form onSubmit={handlerOnSubmit}>
+    <div className="">
+      {/* <form onSubmit={handlerOnSubmit}>
         <input onBlur={onChangeEmailHandler} type="email" name="email" id="" placeholder='Your Email' />
         <br></br>
         <input onBlur={onChangePasswordHandler} type="password" name="password" id="" placeholder='Your Password' />
         <br></br>
         <button type="submit">Register</button>
-      </form>
+      </form> */}
+      <RegisterReact></RegisterReact>
     </div>
   );
 }
