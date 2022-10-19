@@ -6,11 +6,15 @@ import app from '../firebase/firebase.init';
 const auth = getAuth(app);
 
 const RegisterReact = () => {
-    const [passwordError, setPasswordError] = useState('')
+    const [passwordError, setPasswordError] = useState('');
+    const [success, setSuccess] = useState(false);
     const handelOnSubmit = (event) => {
         event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
+
+        setSuccess(false)
+        const form = event.target
+        const email = form.email.value;
+        const password = form.password.value;
         if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
             setPasswordError('Please provide at least two uppercase');
             return;
@@ -27,10 +31,13 @@ const RegisterReact = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
+                setSuccess(true)
+                form.reset();
                 console.log(user);
             })
             .catch(error => {
                 console.log('error', error);
+                setPasswordError(error.message)
             })
         // console.log(email, password);
     }
@@ -46,6 +53,7 @@ const RegisterReact = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder="Password" required />
                 </Form.Group>
+                {success && <p className='text-success'>Sussessfully Done!!!</p>}
                 <p className='text-danger'>{passwordError}</p>
                 <Button variant="primary" type="submit">
                     Submit
