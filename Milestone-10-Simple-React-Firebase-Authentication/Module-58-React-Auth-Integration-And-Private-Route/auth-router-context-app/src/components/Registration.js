@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/UserContext';
 
 const Registration = () => {
-    const { createUser } = useContext(AuthContext)
+    const { createUser, signInWithGoogle } = useContext(AuthContext)
     // console.log(createUser);
     const handelSubmit = (event) => {
         event.preventDefault();
@@ -21,6 +21,16 @@ const Registration = () => {
                 console.error('error', error)
             })
         // console.log(name, email, password);
+    }
+    const handelSignInGoogle = () => {
+        signInWithGoogle()
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.log('error ', error);
+            })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -55,6 +65,7 @@ const Registration = () => {
                             <button className="btn btn-primary">Registration</button>
                         </div>
                     </form>
+                    <button onClick={handelSignInGoogle} className="btn btn-success">Google</button>
                 </div>
             </div>
         </div>
