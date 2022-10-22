@@ -4,7 +4,7 @@ import { AuthContext } from '../contexts/UserContext';
 
 const Header = () => {
     const { user } = useContext(AuthContext);
-    console.log(user)
+    // console.log(user)
     return (
         <div className="navbar bg-primary text-primary-content">
             <Link className="btn btn-ghost normal-case text-xl" to='/'>AuthRouterContext</Link>
