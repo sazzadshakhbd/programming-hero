@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image'
 import { FaEye, FaRegBookmark, FaShareAlt, FaStar } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 
 const NewsSummaryCard = ({ news }) => {
-    console.log(news);
     const { _id, title, author, details, image_url, rating, total_view } = news;
+    // console.log(news);
     return (
         <Card className="mb-5">
             <Card.Header className='d-flex justify-content-between align-items-center'>
@@ -14,12 +14,12 @@ const NewsSummaryCard = ({ news }) => {
                     <Image
                         roundedCircle
                         className='me-2'
-                        src={author.img}
+                        src={author?.img}
                         style={{ height: '60px' }}
                     ></Image>
                     <div>
-                        <p className='mb-0'>{author.name}</p>
-                        <p>{author.published_date}</p>
+                        <p className='mb-0'>{author?.name}</p>
+                        <p>{author?.published_date}</p>
                     </div>
                 </div>
                 <div>
@@ -33,7 +33,7 @@ const NewsSummaryCard = ({ news }) => {
                 <Card.Text>
                     {
                         details.length > 250 ?
-                            <p>{details.slice(0, 250) + '...'} <Link to={`news/${_id}`}>See more</Link></p>
+                            <p>{details.slice(0, 250) + '...'} <Link to={`/news/${_id}`}>Read More</Link> </p>
                             :
                             <p>{details}</p>
                     }
@@ -42,11 +42,11 @@ const NewsSummaryCard = ({ news }) => {
             <Card.Footer className="d-flex justify-content-between">
                 <div>
                     <FaStar className='text-warning me-2'></FaStar>
-                    <span>dfsfs</span>
+                    <span>{rating?.number}</span>
                 </div>
                 <div>
                     <FaEye className='me-2'></FaEye>
-                    <span>ksdf </span>
+                    <span>{total_view}</span>
                 </div>
             </Card.Footer>
         </Card>
