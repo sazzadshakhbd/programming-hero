@@ -23,6 +23,10 @@ app.get('/news/:id', (req, res) => {
     res.send(selectNews);
 });
 
+app.get('/news', (req, res) => {
+    res.send(news)
+})
+
 app.get('/category/:id', (req, res) => {
     // console.log(req.params.category_id)
     const id = req.params.id;
