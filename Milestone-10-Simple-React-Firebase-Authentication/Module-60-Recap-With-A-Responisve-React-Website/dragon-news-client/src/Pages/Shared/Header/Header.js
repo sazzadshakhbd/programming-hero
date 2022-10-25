@@ -42,7 +42,7 @@ const Header = () => {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <Nav.Link>
+                        <>
                             {
                                 user?.uid ?
                                     <>
@@ -55,7 +55,7 @@ const Header = () => {
                                         <Link to='/register'>Register</Link>
                                     </>
                             }
-                        </Nav.Link>
+                        </>
                         <Nav.Link>
                             {
                                 user?.photoURL ?
