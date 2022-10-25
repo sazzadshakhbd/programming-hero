@@ -56,14 +56,14 @@ const Header = () => {
                                     </>
                             }
                         </>
-                        <Nav.Link>
+                        <Link to='/profile'>
                             {
                                 user?.photoURL ?
                                     <Image roundedCircle style={{ width: '30px' }} src={user?.photoURL}></Image>
                                     :
                                     <FaUser></FaUser>
                             }
-                        </Nav.Link>
+                        </Link>
                     </Nav>
                     <div className='d-lg-none'>
                         <LeftSideNav></LeftSideNav>
