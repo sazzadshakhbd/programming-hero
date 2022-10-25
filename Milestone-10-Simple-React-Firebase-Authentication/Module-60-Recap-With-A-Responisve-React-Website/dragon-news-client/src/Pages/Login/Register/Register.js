@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
-    const [error, setError] = useState('')
-    const { createUser } = useContext(AuthContext)
+    const [error, setError] = useState('');
+    const [accepted, setAccepted] = useState(false)
+    const { createUser, updateUserProfile } = useContext(AuthContext)
     const handelSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -18,11 +20,23 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                handelUpdateUserProfile(name, photoURL)
                 form.reset();
             })
             .catch(error => {
                 console.error('error', error);
                 setError(error.message)
+            })
+    }
+    const handelAccept = (event) => {
+        setAccepted(event.target.checked);
+    }
+    const handelUpdateUserProfile = (name, photoURL) => {
+        const profile = { displayName: name, photoURL: photoURL }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => {
+                console.error('error', error);
             })
     }
     return (
@@ -45,8 +59,14 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control name="password" type="password" placeholder="Password" required />
                 </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check
+                        type="checkbox"
+                        onClick={handelAccept}
+                        label={<>Accept <Link to='/terms' className='text-decoration-none'>Terms & Conditions</Link></>} />
+                </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" disabled={!accepted}>
                     Register
                 </Button>
                 <div className='mt-3'>
