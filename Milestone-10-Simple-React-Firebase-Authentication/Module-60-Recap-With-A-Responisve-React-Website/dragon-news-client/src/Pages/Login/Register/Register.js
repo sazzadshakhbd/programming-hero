@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 
 const Register = () => {
     const [error, setError] = useState('');
@@ -35,6 +36,7 @@ const Register = () => {
     const handelAccept = (event) => {
         setAccepted(event.target.checked);
     }
+    useTitle('Register')
     const handelUpdateUserProfile = (name, photoURL) => {
         const profile = { displayName: name, photoURL: photoURL }
         updateUserProfile(profile)
