@@ -1,0 +1,8 @@
+1. How to set favicon?
+   a) Download icon image and generate to favicon
+   b) Go to: https://www.favicon-generator.org/
+   c) icon download and paste public folder
+
+2. How to set dynamic page title based on route?
+   a) type "React helmet async" and search
+   b) Go to: https://www.npmjs.com/package/react-helmet-async 
