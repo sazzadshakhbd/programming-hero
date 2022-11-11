@@ -1,3 +1,5 @@
+Module: 63_5-1 Set favicon and Dynamic page title based on Route [Practice Complete]
+----------------------------------
 1. How to set favicon?
    a) Download icon image and generate to favicon
    b) Go to: https://www.favicon-generator.org/
@@ -6,3 +8,21 @@
 2. How to set dynamic page title based on route?
    a) type "React helmet async" and search
    b) Go to: https://www.npmjs.com/package/react-helmet-async 
+
+
+
+Module: 63_5-2 How to display a location and a Marker on a Google Map [3.31 seceonds পর্যন্ত practice করা হয়েছে। আরও কিছু স্টেপ আছে যা ভিডিও তে দেখান হয়েছে। যেহেতু api key paid তাই এইটা আমি practice করতে পারি নাই।]
+-----------------------------
+3. React Leaflets [maps related npm]
+https://react-leaflet.js.org/
+
+4. React Google maps
+a) Go to - https://react-google-maps-api-docs.netlify.app/
+b) Type this command in my google-react-map project
+c) npm install --save @react-google-maps/api --force
+d) create myLocation component and paste code (see video)
+e) open map in your browser [npm-start]
+
+Module: 63_5-3 Display Dynamic Driving Direction and Route on Google Map [ যেহেতু api key paid তাই এইটা আমি practice করতে পারি নাই।]
+
+
