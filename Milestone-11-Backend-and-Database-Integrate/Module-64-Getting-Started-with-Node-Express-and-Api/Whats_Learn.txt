@@ -1,0 +1,113 @@
+64-1 Module overview node vs other language [SLide Presentation for node js]
+------------------------------
+1. complete but no notes for this tutorial
+
+
+64-2 (Recap) install node-express and use fetch to load data [setup server and client project]
+-------------------------------------
+
+1. SERVER SETUP
+
+a) create project folder name 'simple node server'
+b) cd 'simple node server'
+c) open terminal and run npm init -y
+d) type this text in your package.json file
+e) "start":"node index.js"
+f) crate new file index.js
+g) install express & cors [npm i express cors]
+h) create .gitignore file for node modules 
+i) open express js website [https://expressjs.com/]
+j) click Getting started > Hello World
+h) copy this code and paste your index.js file
+i) just change this code [const port = 3000] instead of
+j) const port = process.env.PORT || 5000 
+k) server setup done now run this server.
+l) type nodemon index.js your terminal
+m) go to browser and type this http://localhost:5000/ [running yes or no]
+
+1.1 How to create some userdata for API?
+
+a) Firstly create some data for users
+const users = [
+    { id: 1, name: 'Maa', email: 'maa@gmail.com' },
+    { id: 2, name: 'Sazzad', email: 'sazzad@gmail.com' },
+];
+b) setup url for show usersdata on your browser
+app.get('/users', (req, res) => {
+    res.send(users)
+})
+c) type this in your browser that user data show or not.
+http://localhost:5000/users
+
+d) After error in your clinet panel then declear cors
+f) open express js website [https://expressjs.com/]
+g) mouser hover in link resources and click Middleware
+h) after scrolling click cors
+i) copy and paste this in your index.js file
+var cors = require('cors')
+app.use(cors())
+j) refresh your client home page and see error fixed.
+
+
+2. CLIENT SETUP
+
+a) npx create-react-app simple node client
+b) open app.js & remove header code
+c) npm start & display browser totaly blank
+
+2.1 How to data load on your server side - clinet side?
+
+a) Call useState
+const [users, setUsers] = useState([]);
+
+b) Call useEffect link your api
+useEffect(() => {
+    fetch('http://localhost:5000/users')
+      .then(res => res.json())
+      .then(data => setUsers(data))
+}, []);
+
+c) show user number in your browser
+return (
+    <div className="App">
+      <h1>Users: {users.length}</h1>
+    </div>
+);
+
+d) show error in your console after reload in your browser
+e) fix this error then cors setup in your server index.js file
+f) after fixing this issue now our user data show on browser
+g) declere map method
+
+ return (
+    <div className="App">
+      <h1>Users: {users.length}</h1>
+      {
+        users.map(user => <p key={user.id}><strong>User Name:</strong> {user.name}, <strong>User Email:</strong> {user.email}</p>)
+      }
+    </div>
+  );
+h) Create form
+<form onSubmit={handelAddUser}>
+ <input type="text" name="name" placeholder="name" />
+ <br></br>
+ <input type="email" name="email" placeholder="email" />
+ <br></br>
+ <button type="submit">Add User</button>
+</form>
+i) call handelAddUser method for form
+    const handelAddUser = (event) => {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const user = { email, name }
+    console.log(user);
+    event.target.reset();
+}
+
+
+
+
+
+
+
