@@ -13,9 +13,20 @@ function App() {
     event.preventDefault();
     const name = event.target.name.value;
     const email = event.target.email.value;
-    const user = { email, name }
+    const user = { email, name };
     console.log(user);
     event.target.reset();
+
+    fetch('http://localhost:5000/users', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.error(err))
   }
 
   return (

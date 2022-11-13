@@ -26,6 +26,7 @@ l) type nodemon index.js your terminal
 m) go to browser and type this http://localhost:5000/ [running yes or no]
 
 1.1 How to create some userdata for API?
+-------------------------------------------
 
 a) Firstly create some data for users
 const users = [
@@ -47,6 +48,19 @@ i) copy and paste this in your index.js file
 var cors = require('cors')
 app.use(cors())
 j) refresh your client home page and see error fixed.
+
+1.2 How to setup post method for server panel?
+
+a) Configure POST
+app.use(express.json())
+app.post('/users', (req, res) => {
+    console.log('POST API Called');
+    // console.log(req.body);
+    const user = req.body;
+    user.id = users.length + 1;
+    users.push(user);
+    res.send(user)
+});
 
 
 2. CLIENT SETUP
@@ -100,10 +114,21 @@ i) call handelAddUser method for form
     event.preventDefault();
     const name = event.target.name.value;
     const email = event.target.email.value;
-    const user = { email, name }
+    const user = { email, name };
     console.log(user);
     event.target.reset();
-}
+
+    fetch('http://localhost:5000/users', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.error(err))
+  }
 
 
 
