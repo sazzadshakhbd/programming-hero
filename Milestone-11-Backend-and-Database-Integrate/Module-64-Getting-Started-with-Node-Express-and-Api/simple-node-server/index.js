@@ -17,22 +17,30 @@ const users = [
     { id: 3, name: 'Marjia', email: 'marjia@gmail.com' },
     { id: 4, name: 'Adib', email: 'adib@gmail.com' },
     { id: 5, name: 'Adiba', email: 'adiba@gmail.com' },
-];
-
-
+]
 // username: dbuser1
-// password: QufBE@8RvPktwsu
-
-const uri = "mongodb+srv://dbuser1:QufBE@8RvPktwsu@cluster0.fo4a3mc.mongodb.net/?retryWrites=true&w=majority";
+// password: QufBE78RvPktwsu
+const uri = "mongodb+srv://dbuser1:QufBE78RvPktwsu@cluster0.btulx9e.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-    const collection = client.db("SimpleNode").collection("users");
-    // perform actions on the collection object
-    console.log('Database Connected');
-    client.close();
-});
+async function run() {
+    try {
+        const collectionUsers = client.db('simpleNode').collection('users');
+        const user = { name: 'Adib Bin Sazzad', email: 'adibbinsazzad@gmail.com', designation: 'Islamic Scholar' }
+        // const result = await collectionUsers.insertOne(user);
+        // console.log(result);
+        app.post('/users', async (req, res) => {
+            const user = req.body;
+            user.id = users.length + 1;
+            const result = await collectionUsers.insertOne(user)
+            console.log(result)
+            res.send(user)
+        });
+    }
+    finally {
 
-
+    }
+}
+run().catch(err => console.log(err))
 app.get('/users', (req, res) => {
     // console.log(req.query)
     if (req.query.name) {
@@ -45,14 +53,14 @@ app.get('/users', (req, res) => {
     }
 });
 
-app.post('/users', (req, res) => {
-    console.log('POST API Called');
-    // console.log(req.body);
-    const user = req.body;
-    user.id = users.length + 1;
-    users.push(user);
-    res.send(user)
-});
+// app.post('/users', (req, res) => {
+//     console.log('POST API Called');
+//     // console.log(req.body);
+//     const user = req.body;
+//     user.id = users.length + 1;
+//     users.push(user);
+//     res.send(user)
+// });
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

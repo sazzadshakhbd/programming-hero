@@ -4,6 +4,12 @@ https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 2. express post request body undefined 
 https://reactgo.com/express-req-body-
 
+3. node mongodb crud
+https://www.mongodb.com/docs/drivers/node/current/fundamentals/crud/
+
+4. javascript try catch
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
+
 Mongodb
 ------------
 username: dbuser1
